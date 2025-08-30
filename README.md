@@ -2,6 +2,10 @@
 
 A complete family organization platform that runs entirely on your local network. Manage tasks, plan meals, organize movie nights, create polls, and track MotoGP events - all without any external dependencies.
 
+FOR ME:
+Make sure to fix after npm install the module path-to-regex by disable all in dist/index.js with DEBUG_URL. Now server.js should start as intended.
+Commands: npm install, npm run dev, node server/server.js
+
 ## Features
 
 - **Tasks Management**: Create, assign, and track family tasks
