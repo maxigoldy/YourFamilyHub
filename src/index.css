@@ -1,0 +1,76 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+  
+  body {
+    @apply bg-gray-900 text-gray-100;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-gray-800/50 backdrop-blur-sm border border-gray-700/50;
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  }
+  
+  .gold-text {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl;
+  }
+  
+  .glow-gold {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 215, 0, 0.1);
+  }
+  
+  .input-dark {
+    @apply bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-400 focus:border-yellow-500 focus:ring-yellow-500/20;
+  }
+  
+  .btn-gold {
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-semibold hover:from-yellow-400 hover:to-yellow-500 focus:ring-yellow-500/50 transition-all duration-200;
+  }
+  
+  .btn-dark {
+    @apply bg-gray-700 text-gray-100 hover:bg-gray-600 border-gray-600 focus:ring-gray-500/50;
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .glass-effect {
+      @apply bg-gray-800/70 backdrop-blur-md;
+    }
+    
+    .hover-lift:hover {
+      @apply transform-none shadow-none;
+    }
+    
+    .hover-lift:active {
+      @apply transform scale-95;
+    }
+  }
+}
