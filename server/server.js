@@ -24,10 +24,10 @@ const defaultData = {
   events: [],
   links: [],
   admin_password: '',
-  family_code: '',
+  family_code: 'YOURFAMILY',
   settings: {
     app_name: 'YourFamily',
-    motogp_enabled: true,
+    motogp_enabled: false,
     setup_completed: false
   }
 };
@@ -110,7 +110,7 @@ app.post('/api/setup', (req, res) => {
   appData.settings.setup_completed = true;
   appData.settings.app_name = app_name || 'YourFamily';
   appData.admin_password = admin_password;
-  appData.family_code = family_code;
+  appData.family_code = family_code || 'YOURFAMILY';
   
   saveData(appData);
   
