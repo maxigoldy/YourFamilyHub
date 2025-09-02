@@ -4,6 +4,8 @@ A complete family organization platform that runs entirely on your local network
 
 ### Documentation: https://docs.yourfamilyhub.xyz/
 
+### Demo: https://demo.yourfamilyhub.xyz/
+
 ## Features
 
 - **Tasks Management**: Create, assign, and track family tasks
