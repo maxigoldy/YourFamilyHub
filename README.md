@@ -2,7 +2,7 @@
 
 A complete family organization platform that runs entirely on your local network. Manage tasks, plan meals, organize movie nights, create polls, and track MotoGP events - all without any external dependencies.
 
-### Documentation: https://maxigoldmann.gitbook.io/yourfamilyhub
+### Documentation: https://docs.yourfamilyhub.xyz/
 
 ## Features
 
