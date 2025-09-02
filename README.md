@@ -71,7 +71,19 @@ node server/server.js
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is not licensed under any open-source license.
+
+You are welcome to contribute to its development and use it for yourself. However, you are not allowed to republish this project or its code in any form. It was created for personal use by me and my family and is now shared with the self-hosting community as a courtesy.
+
+Please respect the following conditions:
+
+Do not re-upload, sell, or make any profit from this project.
+
+You may use and modify it only for personal use.
+
+If you have improvements or enhancements to share, feel free to open a pull request.
+
+Thank you for respecting these terms.
 
 ## Support
 
