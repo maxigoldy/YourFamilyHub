@@ -216,7 +216,7 @@ node server/server.js
 - **Network Links**: Manage quick links to local services
 
 ### Data Storage
-- All data is stored in `data.db` (SQLite database)
+- All data is stored in `data.json` (SQLite database)
 - No external network connections
 - Automatic database initialization
 - Data persists between restarts
@@ -233,7 +233,7 @@ node server/server.js
 To backup your data:
 ```bash
 # Copy the database file
-cp /var/www/YourFamilyHub/data.db /path/to/backup/YourFamilyHub-backup-$(date +%Y%m%d).db
+cp /var/www/YourFamilyHub/data.json /path/to/backup/YourFamilyHub-backup-$(date +%Y%m%d).db
 ```
 
 To restore:
@@ -242,8 +242,8 @@ To restore:
 sudo systemctl stop YourFamilyHub
 
 # Replace the database
-sudo cp /path/to/backup/YourFamilyHub-backup-YYYYMMDD.db /var/www/YourFamilyHub/data.db
-sudo chown www-data:www-data /var/www/YourFamilyHub/data.db
+sudo cp /path/to/backup/YourFamilyHub-backup-YYYYMMDD.db /var/www/YourFamilyHub/data.json
+sudo chown www-data:www-data /var/www/YourFamilyHub/data.json
 
 # Start the service
 sudo systemctl start YourFamilyHub
@@ -263,10 +263,10 @@ sudo netstat -tlnp | grep :3000
 ### Database issues
 ```bash
 # Check database file permissions
-ls -la /var/www/YourFamilyHub/data.db
+ls -la /var/www/YourFamilyHub/data.json
 
 # Reset database (WARNING: This deletes all data)
-sudo rm /var/www/YourFamilyHub/data.db
+sudo rm /var/www/YourFamilyHub/data.json
 sudo systemctl restart YourFamilyHub
 ```
 
