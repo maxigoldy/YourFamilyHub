@@ -1,4 +1,4 @@
-# YourFamily - Self-Hosted Family Hub
+# YourFamilyHub - Self-Hosted Family Hub
 
 A complete family organization platform that runs entirely on your local network. Manage tasks, plan meals, organize movie nights, create polls, and track MotoGP events - all without any external dependencies.
 
@@ -30,34 +30,34 @@ Commands: npm install, npm run dev, node server/server.js
 1. **Download and extract GoldFamily:**
 ```bash
 # Create directory for the application
-sudo mkdir -p /var/www/yourfamily
-cd /var/www/yourfamily
+sudo mkdir -p /var/www/YourFamilyHub
+cd /var/www/YourFamilyHub
 
 # Download the latest release
-curl -L https://github.com/yourusername/yourfamily/releases/latest/download/yourfamily-dist.tar.gz | sudo tar -xz
+curl -L https://github.com/maxigoldy/YourFamilyHubHub/releases/latest/download/YourFamilyHubHub-dist.tar.gz | sudo tar -xz
 
 # Set proper permissions
-sudo chown -R www-data:www-data /var/www/yourfamily
-sudo chmod +x /var/www/yourfamily/start.sh
+sudo chown -R www-data:www-data /var/www/YourFamilyHub
+sudo chmod +x /var/www/YourFamilyHub/start.sh
 ```
 
 2. **Install dependencies:**
 ```bash
-cd /var/www/yourfamily
+cd /var/www/YourFamilyHub
 sudo npm install --production
 ```
 
 3. **Configure Nginx:**
 ```bash
 # Create nginx configuration
-sudo tee /etc/nginx/sites-available/yourfamily << 'EOF'
+sudo tee /etc/nginx/sites-available/YourFamilyHub << 'EOF'
 server {
     listen 80;
-    server_name yourfamily.local;  # Change to your preferred domain
+    server_name YourFamilyHub.local;  # Change to your preferred domain
     
     # Serve static files
     location / {
-        root /var/www/yourfamily/dist;
+        root /var/www/YourFamilyHub/dist;
         try_files $uri $uri/ /index.html;
         
         # Security headers
@@ -88,22 +88,22 @@ server {
 EOF
 
 # Enable the site
-sudo ln -sf /etc/nginx/sites-available/yourfamily /etc/nginx/sites-enabled/
+sudo ln -sf /etc/nginx/sites-available/YourFamilyHub /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
 
 4. **Create systemd service:**
 ```bash
-sudo tee /etc/systemd/system/yourfamily.service << 'EOF'
+sudo tee /etc/systemd/system/YourFamilyHub.service << 'EOF'
 [Unit]
-Description=YourFamily Self-Hosted Family Hub
+Description=YourFamilyHub Self-Hosted Family Hub
 After=network.target
 
 [Service]
 Type=simple
 User=www-data
-WorkingDirectory=/var/www/yourfamily
+WorkingDirectory=/var/www/YourFamilyHub
 ExecStart=/usr/bin/node server/server.js
 Restart=always
 RestartSec=10
@@ -115,7 +115,7 @@ NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/var/www/yourfamily
+ReadWritePaths=/var/www/YourFamilyHub
 
 [Install]
 WantedBy=multi-user.target
@@ -123,30 +123,30 @@ EOF
 
 # Enable and start the service
 sudo systemctl daemon-reload
-sudo systemctl enable yourfamily
-sudo systemctl start yourfamily
+sudo systemctl enable YourFamilyHub
+sudo systemctl start YourFamilyHub
 ```
 
 5. **Verify installation:**
 ```bash
 # Check service status
-sudo systemctl status yourfamily
+sudo systemctl status YourFamilyHub
 
 # Check nginx status
 sudo systemctl status nginx
 
 # View logs if needed
-sudo journalctl -u yourfamily -f
+sudo journalctl -u YourFamilyHub -f
 ```
 
 6. **Access your application:**
-   - Open your browser and navigate to `http://yourfamily.local` (or your server's IP)
+   - Open your browser and navigate to `http://YourFamilyHub.local` (or your server's IP)
    - Complete the initial setup by creating an admin account
    - Configure your family code and app name
 
 ### Local Network Access
 
-To access YourFamily from other devices on your network:
+To access YourFamilyHub from other devices on your network:
 
 1. **Find your server's IP address:**
 ```bash
@@ -155,7 +155,7 @@ ip addr show | grep inet
 
 2. **Update nginx configuration:**
 ```bash
-sudo nano /etc/nginx/sites-available/yourfamily
+sudo nano /etc/nginx/sites-available/YourFamilyHub
 # Change server_name to: server_name goldfamily.local YOUR_SERVER_IP;
 sudo systemctl reload nginx
 ```
@@ -175,7 +175,7 @@ YOUR_SERVER_IP    family.home
 
 2. **Update nginx configuration:**
 ```bash
-sudo nano /etc/nginx/sites-available/yourfamily
+sudo nano /etc/nginx/sites-available/YourFamilyHub
 # Change server_name to: server_name family.home;
 sudo systemctl reload nginx
 ```
@@ -186,8 +186,8 @@ If you prefer to set up manually:
 
 1. **Clone and build:**
 ```bash
-git clone https://github.com/maxigoldy/YourFamilyHub.git
-cd yourfamily
+git clone https://github.com/maxigoldy/YourFamilyHubHub.git
+cd YourFamilyHub
 npm install
 npm run build
 ```
@@ -233,20 +233,20 @@ node server/server.js
 To backup your data:
 ```bash
 # Copy the database file
-cp /var/www/yourfamily/data.db /path/to/backup/yourfamily-backup-$(date +%Y%m%d).db
+cp /var/www/YourFamilyHub/data.db /path/to/backup/YourFamilyHub-backup-$(date +%Y%m%d).db
 ```
 
 To restore:
 ```bash
 # Stop the service
-sudo systemctl stop yourfamily
+sudo systemctl stop YourFamilyHub
 
 # Replace the database
-sudo cp /path/to/backup/yourfamily-backup-YYYYMMDD.db /var/www/yourfamily/data.db
-sudo chown www-data:www-data /var/www/yourfamily/data.db
+sudo cp /path/to/backup/YourFamilyHub-backup-YYYYMMDD.db /var/www/YourFamilyHub/data.db
+sudo chown www-data:www-data /var/www/YourFamilyHub/data.db
 
 # Start the service
-sudo systemctl start yourfamily
+sudo systemctl start YourFamilyHub
 ```
 
 ## Troubleshooting
@@ -254,7 +254,7 @@ sudo systemctl start yourfamily
 ### Service won't start
 ```bash
 # Check logs
-sudo journalctl -u yourfamily -n 50
+sudo journalctl -u YourFamilyHub -n 50
 
 # Check if port 3000 is available
 sudo netstat -tlnp | grep :3000
@@ -263,11 +263,11 @@ sudo netstat -tlnp | grep :3000
 ### Database issues
 ```bash
 # Check database file permissions
-ls -la /var/www/yourfamily/data.db
+ls -la /var/www/YourFamilyHub/data.db
 
 # Reset database (WARNING: This deletes all data)
-sudo rm /var/www/yourfamily/data.db
-sudo systemctl restart yourfamily
+sudo rm /var/www/YourFamilyHub/data.db
+sudo systemctl restart YourFamilyHub
 ```
 
 ### Nginx issues
