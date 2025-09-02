@@ -24,7 +24,8 @@ A complete family organization platform that runs entirely on your local network
 - Git installed
 
 ### Installation
-See our Docs: https://maxigoldmann.gitbook.io/yourfamilyhub
+See our Docs: https://docs.yourfamilyhub.xyz/
+Website: https://yourfamilyhub.xyz/
 
 ## Configuration
 
