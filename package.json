@@ -3,8 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "description": "YourFamilyHub is a family management application designed to help families stay organized and connected. It offers features such as shared diner plans, task management, movie watchlist, and network settings.",
+  "author": {
+    "name": "Maximilian Goldmann",
+    "email": "info@yourfamilyhub.xyz"},
   "scripts": {
     "dev": "vite",
+    "server": "node server/server.js",
     "build": "vite build",
     "start": "node server/server.js",
     "start:prod": "NODE_ENV=production node server/server.js",
