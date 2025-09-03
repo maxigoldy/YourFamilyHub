@@ -79,7 +79,7 @@ node server/server.js
 
 This project is not licensed under any open-source license.
 
-You are welcome to contribute to its development and use it for yourself. However, you are not allowed to republish this project or its code in any form. It was created for personal use by me and my family and is now shared with the self-hosting community as a courtesy.
+You are welcome to contribute to its development and use it for yourself. However, you are not allowed to republish this project or its code in any form. It was created for personal use by me and my family and is now shared with the self-hosting community as a courtesy. I spent around 100-200 EUR and 90h into it, give it our open source, so please respect my thoughts about re-uploading and more.
 
 Please respect the following conditions:
 
