@@ -6,6 +6,9 @@ A complete family organization platform that runs entirely on your local network
 
 ### Demo: https://demo.yourfamilyhub.xyz/
 
+<img width="1122" height="693" alt="YourFamilyHub - Familyhub self-hosted free open source" src="https://github.com/user-attachments/assets/ab1e03c9-d8c1-4640-8d09-856c74689c59" />
+
+
 ## Features
 
 - **Tasks Management**: Create, assign, and track family tasks
