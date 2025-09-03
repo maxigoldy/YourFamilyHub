@@ -11,13 +11,16 @@ NC='\033[0m'  # No Color
 
 echo -e "${GREEN}**********************************************"
 echo -e "${GREEN}   Welcome to YourFamily Self-Hosted Hub!   "
-echo -e "${GREEN}**********************************************"
+echo -e "${GREEN}                 v1.0.0                       "
+echo -e "${GREEN}**********************************************\n\n"
 echo -e "${NC}"
 
 # Check if Node.js is installed
+echo -e "${GREEN}**********************************************"
+echo -e "${YELLOW}##### Starting Installation #####${NC}"
 echo -e "${YELLOW}Checking if Node.js is installed...${NC}"
 if ! command -v node &> /dev/null; then
-    echo -e "${RED}Error: Node.js is not installed. Please install Node.js 18+ first.${NC}"
+    echo -e "${RED}Error: Node.js is not installed. Please install Node.js 18+ first.\nHow to: https://docs.yourfamilyhub.xyz/errors/server/node.js-is-not-installed${NC}"
     exit 1
 fi
 
@@ -35,14 +38,20 @@ rm -rf node_modules package-lock.json
 echo -e "${YELLOW}Installing dependencies...${NC}"
 npm install --production
 
+# Autorunning fix
+./path-to-regexp-error-fix.sh
+
+echo -e "${YELLOW}\n##### End of Installation #####\n\nEnjoy your self-hosted version of YourFamilyHub!\nmade by Maxi Goldmann\n\n${NC}"
+
 # Set production environment
 export NODE_ENV=production
 export PORT=${PORT:-3000}
 
 # Start the server
 echo -e "${GREEN}**********************************************"
-echo -e "${GREEN}  Starting YourFamily server on port $PORT...${NC}"
+echo -e "${GREEN}  Starting YourFamilyHub server on port $PORT...${NC}"
 echo -e "${GREEN}  Access your family hub at: http://localhost:$PORT${NC}"
+echo -e "${GREEN}  Documentation: https://docs.yourfamilyhub.xyz/${NC}"
 echo -e "${GREEN}  Press Ctrl+C to stop the server${NC}"
 echo -e "${GREEN}**********************************************"
 echo -e "${NC}"
