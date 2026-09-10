@@ -33,6 +33,25 @@ A complete family organization platform that runs entirely on your local network
 ### Installation
 See our Docs: https://github.com/maxigoldy/YourFamilyHub/wiki
 
+## Local Setup
+
+```bash
+# Install dependencies
+npm run setup
+```
+
+## Scripts
+
+- `npm run setup` - install project dependencies
+- `npm run dev` - start the frontend (Vite)
+- `npm run dev:server` - start the backend server
+- `npm run build` - build the frontend for production
+- `npm run start` - start the backend server
+- `npm run start:prod` - start backend server with `NODE_ENV=production`
+- `npm run lint` - run ESLint
+- `npm run check` - run lint + build validation
+- `npm run preview` - preview the production frontend build
+
 ## Configuration
 
 ### Initial Setup
@@ -67,13 +86,13 @@ See our Docs: https://github.com/maxigoldy/YourFamilyHub/wiki
 To run in development mode:
 ```bash
 # Install dependencies
-npm install
+npm run setup
 
 # Start development server (frontend)
 npm run dev
 
 # Start backend server (in another terminal)
-node server/server.js
+npm run dev:server
 ```
 
 ## License
