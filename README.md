@@ -4,7 +4,7 @@
 
 A complete family organization platform that runs entirely on your local network. Manage tasks, plan meals, organize movie nights, create polls, and track MotoGP events - all without any external dependencies.
 
-### Documentation: https://docs.yourfamilyhub.xyz/
+### Documentation: https://github.com/maxigoldy/YourFamilyHub/wiki (https://docs.yourfamilyhub.xyz/ will be expired)
 
 <img width="1122" height="693" alt="YourFamilyHub - Familyhub self-hosted free open source" src="https://github.com/user-attachments/assets/ab1e03c9-d8c1-4640-8d09-856c74689c59" />
 
@@ -29,8 +29,7 @@ A complete family organization platform that runs entirely on your local network
 - Git installed
 
 ### Installation
-See our Docs: https://docs.yourfamilyhub.xyz/
-Website: https://yourfamilyhub.xyz/
+See our Docs: https://github.com/maxigoldy/YourFamilyHub/wiki
 
 ## Configuration
 
