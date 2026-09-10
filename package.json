@@ -8,12 +8,15 @@
     "name": "Maximilian Goldmann",
     "email": "info@yourfamilyhub.xyz"},
   "scripts": {
+    "setup": "npm install",
     "dev": "vite",
+    "dev:server": "node server/server.js",
     "server": "node server/server.js",
     "build": "vite build",
     "start": "node server/server.js",
     "start:prod": "NODE_ENV=production node server/server.js",
     "lint": "eslint .",
+    "check": "npm run lint && npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
