@@ -1,12 +1,10 @@
 # YourFamilyHub - Self-Hosted Family Hub
 
-> :warning: **No further development**: Due to low attendance and the high time investment required, development of YourFamilyHub was discontinued in February 2026. Feel free to fork it by yourself (just credit this repo). All domains are going down by end of 2026. No longer support givin!
+> :warning: **No further development**: Due to low attendance and the high time investment required, development of YourFamilyHub was discontinued in February 2026. Feel free to fork it by yourself (just credit this repo). All domains are going down by end of 2026. No longer support givin! This Repo will be archived.
 
 A complete family organization platform that runs entirely on your local network. Manage tasks, plan meals, organize movie nights, create polls, and track MotoGP events - all without any external dependencies.
 
 ### Documentation: https://docs.yourfamilyhub.xyz/
-
-### Demo: https://demo.yourfamilyhub.xyz/ (coming soon)
 
 <img width="1122" height="693" alt="YourFamilyHub - Familyhub self-hosted free open source" src="https://github.com/user-attachments/assets/ab1e03c9-d8c1-4640-8d09-856c74689c59" />
 
